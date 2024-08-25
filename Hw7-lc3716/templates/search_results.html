@@ -1,0 +1,43 @@
+<!-- search_results.html -->
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container mt-3">
+    <h2>Search Results for "{{ search_query }}"</h2>
+    {% if count > 0 %}
+    <p class="result">{{ count }} result(s) found </p>
+        <div class="list-group">
+          {% for item in items %}
+          <a href="/view/{{ item['id'] }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between ">
+                  <h5 class="mb-1 search-title">{{ item['Restaurant'] | safe }}</h5>
+                  <div class="badge badge-warning badge-pill badge-search ">{{ item['Rating'] | safe }}</div>
+              </div>
+
+              <p class="search_descript">{{ item['Description'] | safe }}</p>
+            
+             <div class="row">
+                 <div class="col-4">
+                    <img class="restaurant_Search_photo" src="{{ item['Food_image2'] }}" alt="Restaurant Photo">
+                 </div>
+                
+                 <div class="col-3 padpad">
+                    <ul>
+                        {% for offering in item['Offerings'] %}
+                            <li>{{ offering }}</li>
+                        {% endfor %}
+                      </ul>
+
+                 </div>
+    
+             </div>
+
+              <small>{{ item['Address'] }}</small>
+          </a>
+          {% endfor %}
+        </div>
+    {% else %}
+        <p>No Results Found</p>
+    {% endif %}
+</div>
+{% endblock %}

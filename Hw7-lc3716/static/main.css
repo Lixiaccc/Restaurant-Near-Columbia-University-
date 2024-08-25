@@ -1,0 +1,421 @@
+.container-fluid{
+padding: 0px !important;
+}
+
+.container {
+  max-width: 1300px !important;
+  margin: auto;
+  padding:0px! important;
+}
+
+.navbar-brand {
+  font-size: 35px !important; /* Adjust this value as needed */
+  font-weight: 900 !important;
+  color: darkcyan !important;
+  font-family: Fantasy;
+  padding-top: 20px !important;
+}
+
+
+.restaurant_photo{
+  padding: 10px !important;
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+  padding-left:0px !important;
+  padding-right:0px !important;
+  margin-right: 30px !important;
+}
+
+.food{
+    width: 330px;;    /* makes the image take the full width of its parent */
+    height: 200px;   /* maintains the aspect ratio */
+     /* Optional: this ensures the image covers the area without distorting. Useful for different aspect ratios */
+    Margin-top: 10px !important;
+    padding:0px !important;
+    margin-left: 100px !important;
+}
+
+.row {
+  display: flex;
+  align-items: center; /* This centers the content vertically */
+}
+
+.max{
+  width: 1100px;
+}
+
+.color1{
+  background-color: aquamarine;
+
+}
+.color2{
+  background-color:rgb(255, 243, 243);
+}
+
+
+.main {
+  color:  rgb(89, 88, 88);
+  font-weight: 700;
+  padding-top:20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  
+}
+
+
+.padd3{
+  padding-bottom:50px !important;
+}
+.linked{
+  padding:50px;
+}
+
+.custom-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.restaurant_name{
+  font-size: 18px;
+  color:  rgb(89, 88, 88);
+  font-weight: bold;
+}
+
+.bordered-col {
+  padding: 10px !important;
+  margin: 10px !important; /* Add space between columns */
+  border-radius: 5px;
+  box-shadow: 5px 10px 8px 5px #888888;
+  background-color: white;
+  margin-bottom: 30px !important;
+}
+
+.bordered-col:hover {
+  background-color: #f0f0f0; /* Change to your desired hover color */
+}
+
+.restaurant_descrip{
+  color:  rgb(89, 88, 88);
+}
+
+.restaurant_img{
+width: 300px;
+height: 200px;
+}
+
+.intro{
+  background-color: white;
+  height: 550px;
+}
+
+
+.about{
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 600px;
+  font-size: 13px;
+  color:  rgb(89, 88, 88);;
+}
+
+.info{
+  color: rgb(89, 88, 88);;
+  padding-top:10px;;
+}
+
+.result{
+  font-weight: 500;
+  color: rgb(89, 88, 88);;
+}
+
+.descript{
+  color:gray ;
+}
+
+.about_us{
+  font-size: 20px;
+  color:  rgb(37, 43, 44);
+}
+
+.bottom_descript{
+  color:grey !important;
+  font-size: 13px;
+}
+
+mark {
+  background-color: yellow !important;
+  padding:0px !important;
+}
+.restaurant_Search_photo{
+  width: 400px;
+
+}
+
+.search_descript{
+  margin:0px !important;
+}
+
+.padpad{
+  padding-left: 40px !important;
+}
+
+.search-title{
+  font-size: 30px;
+  padding-top: 10px !important;
+}
+
+
+ul {
+  list-style: none;
+  font-size: 18px;
+  color: rgb(89, 88, 88);
+}
+
+ul li:before {
+  content: '✓  ';
+  color: green !important;
+}
+
+
+
+.custom-ul{
+  list-style: square !important;
+  font-size: 13px;
+}
+
+.custom-ul li:before {
+  content: '';
+}
+
+.details{
+  margin-top: -80px !important;
+}
+
+.detail_ul{
+  list-style: inside;
+  text-align: left;
+  font-size: 18px;
+  
+}
+
+.detail_ul li:before {
+  content: ' ';
+}
+
+.stars i {
+  color: #FFD700; /* Gold color */
+}
+
+.go_top{
+  margin-top: -300px!important;
+}
+
+
+.offer-left{
+  text-align: left !important;
+  padding-left:30% !important;
+  padding-top: 80px !important;
+}
+
+.warning{
+  color: red;
+
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-label {
+  font-weight: bold;
+}
+.form-control {
+  border-radius: 0.25rem;
+}
+.form-section-header {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.created{
+  color: darkcyan !important;
+  font-size: 27px !important;
+}
+.created1{
+  font-size: 40px !important;
+}
+
+label{
+  font-size: 20px !important;
+  font-weight: 550 !important;
+}
+
+.custom-btn{
+  background-color: aquamarine !important;
+  width: 300px !important;
+  height: 50px !important;
+  border-radius: 25px !important; /* Adjusted for rounded edges */
+  color: darkcyan !important;
+  font-size: medium !important;
+  font-weight: 700 !important;
+  text-align: center; /* Centers text in button */
+  line-height: 50px; /* Centers text vertically */
+  display: inline-block; /* Ensures <a> behaves like a block, respecting width and height */
+  text-decoration: none; /* Removes underline from <a> */
+  margin-bottom: 20px !important;
+}
+
+.custom-btn1{
+  background-color:white !important;
+  border: 2px solid aquamarine!important;
+}
+
+.no_margin{
+  margin:0px !important;
+  margin-top:10px !important;
+  margin-bottom:20px !important;
+}
+
+.btn2{
+  text-align: right !important;
+
+}
+
+.pad{
+  padding: 20px !important;
+}
+
+.add_restaurant{
+  padding-top: 21px !important;
+  font-weight: 500 !important;
+}
+
+.edit_button{
+  font-size: 15px !important;
+  font-weight: 600;
+  color: aquamarine !important;
+  border: 2px solid aquamarine !important;
+}
+
+p{
+  font-size: 18px;
+  color: rgb(89, 88, 88) !important;
+}
+
+strong{
+  font-size: 20px !important;
+  color: rgb(89, 88, 88) !important;
+}
+
+.small{
+  font-size:13px!important;
+}
+
+.distance_pad{
+  padding-left: 70px !important;
+}
+
+.badge-search{
+  padding:0px !important;
+  width: 40px !important;
+  height: 20px ! important;
+  display: inline-flex !important; /* Use flexbox for alignment */
+  justify-content: center !important; /* Center horizontally */
+  align-items: center !important; /* Center vertically */
+}
+
+.nav-link{
+  color: darkcyan !important;
+}
+
+.success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adjust the space between the check mark and the text */
+}
+
+.check{
+  color: darkcyan !important;
+  font-size: 50px !important;
+}
+
+a.created {
+  text-decoration: underline;
+}
+
+.dialog-btn1{
+  background-color: aquamarine !important;
+  margin-left: 30px !important;
+  width: 100px !important;
+}
+.dialog-btn2{
+  background-color: lightgray !important;
+  width: 100px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  background-color: grey !important; /* Use !important to override jQuery UI styles */
+  color: white; /* Optional: change the title text color if needed */
+  font-size: 20px !important;
+}
+
+.ui-dialog{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.19); /* Horizontal offset, vertical offset, blur radius, and color */
+}
+.question{
+  text-align: center;
+  padding-top: 10px !important;
+  padding-bottom: 30px !important;
+  font-weight: 300 !important;
+  font-size: 20px !important;
+
+}
+
+.dialog-btn{
+  text-align: right;
+  padding-right: 10px !important;
+}
+
+.edit-restaurant{
+  text-align: right;
+}
+
+.darkgrey{
+  color: rgb(89, 88, 88) !important;
+}
+
+.grey{
+  color: rgb(154, 150, 150) !important;
+}
+
+.ul_again{
+  padding-left: 40% !important;
+  list-style: none !important;
+  font-size: 18px !important;
+  color: rgb(89, 88, 88) !important;
+  text-align: left !important;
+  font-weight: 700 !important;
+}
+
+
+.detail_description{
+  font-size: 15px !important ;
+  font-weight: 700 !important;
+  align-items: center;
+  margin: 0px !important;
+  margin-top: 24px !important;
+  margin-left: 15px !important;
+  color: rgb(89, 88, 88)!important;
+}

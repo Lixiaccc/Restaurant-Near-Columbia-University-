@@ -1,0 +1,67 @@
+<!-- restaurant_detail.html -->
+{% extends "main.html" %}
+
+{% block content %}
+<div class="mt-2">  
+     <div class="d-flex ">
+        <h1>{{ restaurant['Restaurant'] }}</h1>         
+        <a class="detail_description" href="/search?query={{ restaurant['Description'] }}"  target="_self"> 
+            {{ restaurant['Description'] }}  
+        </a>
+    </div>
+
+    <p>
+        <span class="stars">
+          {% for _ in range(full_stars) %}
+            <i class="fa fa-lg fa-star"></i><!-- Full star -->
+          {% endfor %}
+          {% if half_star %}
+            <i class="fa fa-lg fa-star-half-o"></i><!-- Half star -->
+          {% endif %}
+          {% for _ in range(empty_stars) %}
+            <i class="fa fa-lg fa-star-o"></i><!-- Empty star -->
+          {% endfor %}
+        </span>
+      </p>
+
+    <p class="darkgrey">Price Range: {{ restaurant['price_range'] }}</p>
+    <p class="darkgrey">Hours Open:</p>
+    <ul class="darkgrey detail_ul">
+        <li class="darkgrey">
+            {{ restaurant['Hours']}}
+        </li>
+    </ul> 
+
+    <p class="darkgrey" > Distance from campus: {{ restaurant['Distance_from_campus'] }}</p>
+    <a href="{{ restaurant['Menu'] }}" target="_blank">Click for Menu</a>
+
+
+    <div class="row ">
+    <div class="col-6 pad">
+        <img class="restaurant_photo" src="{{ restaurant['Restaurant_image'] }}" alt="Image of the Restaurant or Food from the Restaurant">
+
+    </div>
+            
+    <div class="col-6 text-center go_top">
+        <div>
+            <img class="food" src="{{ restaurant['Food_image1'] }}" alt="Image of the Food in the Restaurant">
+        </div>
+<div>
+    <img class="food" src="{{ restaurant['Food_image2'] }}" alt="Image of the Food in the Restaurant">
+</div>
+            
+    <p class="offer-left">Offerings:</p>
+    <ul class="ul_again">
+        {% for Offerings in restaurant['Offerings'] %}
+            <li>
+            <a class="darkgrey" href="/search?query={{ Offerings }}"  target="_self"> {{ Offerings }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    </div>
+    
+        <p class="grey">{{ restaurant['Summary'] }}</p>
+    <p>Address: {{ restaurant['Address'] }}</p>
+    <a href="/edit/{{restaurant['id'] }}" class="btn edit_button">Edit Page</a>
+</div>
+{% endblock %}

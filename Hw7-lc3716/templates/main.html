@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+<!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+
+
+
+    <title>Restaurant Near Columbia</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <nav class="navbar color1 navbar-expand-lg navbar-light ">
+          <div class="container-fluid justify-content-between"> <!-- Adjusted for full-width and content justification -->
+              <a class="navbar-brand logo" href="/">Restaurant Near Columbia</a>
+              <a class="nav-link add_restaurant" href="/add">Add Restaurant</a>
+            <!--<form class="d-flex ml-auto color2" action="/search" method="get"> Added ml-auto class here 
+                <input class="form-control me-2" type="search" id="search-input" name="query" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+              <form class="d-flex ml-auto color2" action="/search" method="get" onsubmit="return validateSearchForm()"> <!-- Added onsubmit event handler -->
+                <input class="form-control me-2" type="search" id="search-input" name="query" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
+  </div>
+    
+    
+
+    <div class="container pad">   
+        {% block content %}
+        {% endblock %}
+    </div>
+
+  </body>
+</html>
+
+
+
+

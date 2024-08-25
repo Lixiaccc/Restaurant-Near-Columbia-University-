@@ -1,0 +1,95 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="new_request">
+    <h2 class="no_margin">Edit Restaurant: {{ restaurant['Restaurant'] }}</h2>
+  </div>
+
+  <form method="post" action="{{ url_for('edit_restaurant', id=restaurant['id']) }}">
+    <div class="form-group mb-3">
+      <label for="Restaurant">Restaurant name:</label>
+      <input type="text" class="form-control" id="Restaurant" name="Restaurant" value="{{ restaurant['Restaurant'] }}" required></input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Rating">Rating:</label>
+      <input type="text" class="form-control" id="Rating" name="Rating" value="{{ restaurant['Rating'] }}" min="1" max="5" step="0.1" required> </input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Description">Description:</label>
+      <input type="text" class="form-control" id="Description" name="Description" value="{{ restaurant['Description'] }}" required></input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Restaurant_image">Restaurant image:</label>
+      <input type="text" class="form-control" id="Restaurant_image" name="Restaurant_image" value="{{ restaurant['Restaurant_image'] }}" required></input>
+    </div>
+    
+    <div class="form-group mb-3">
+      <label for="Food_image1">Food image 1:</label>
+      <input type="text" class="form-control" id="Food_image1" name="Food_image1" value="{{ restaurant['Food_image1'] }}"  required></input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Food_image2">Food image 2:</label>
+      <input type="text" class="form-control" id="Food_image2" name="Food_image2" value="{{ restaurant['Food_image2'] }}"  required></input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Summary">Summary:</label>
+      <textarea type="text" class="form-control" id="Summary" name="Summary" rows="6" required> {{ restaurant['Summary'] }}</textarea >
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Address">Address:</label>
+      <input type="text" class="form-control" id="Address" name="Address" value="{{ restaurant['Address'] }}" required></input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="price_range">Price range:</label>
+      <input type="text" class="form-control" id="price_range" name="price_range" value="{{ restaurant['price_range'] }}" required> </input>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Menu">Menu:</label>
+      <input type="text" class="form-control" id="Menu" name="Menu" value="{{ restaurant['Menu'] }}" required>
+    </div>
+    <div class="form-group mb-3">
+      <label for="Hours">Hours:</label>
+      <input type="text" class="form-control" id="Hours" name="Hours" value="{{ restaurant['Hours'] }}" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Distance_from_campus">Distance from campus:</label>
+      <input type="text" class="form-control" id="Distance_from_campus" name="Distance_from_campus" value="{{ restaurant['Distance_from_campus'] }}" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="Contact">Contact:</label>
+      <input type="text" class="form-control" id="Contact" name="Contact" value="{{ restaurant['Contact'] }}" required>
+    </div>
+    <div class="form-group mb-3">
+      <label for="Offerings">Offerings:</label>
+      <input type="text" class="form-control" id="Offerings" name="Offerings" value="{{ restaurant['Offerings'] | join(', ') }}">
+    </div>
+
+
+    <!-- Add more input fields as needed -->
+    <div class="edit-restaurant">
+      <button type="button" id="open-dialog" class="btn custom-btn custom-btn1">Discard</button>
+      <div id="dialog" title="Discard CHanges" class="dialog_">
+        <div class="question">Are you sure you want to discard your changes?</div>
+            <div class="dialog-btn justify-content-between">
+              <button data-url="{{ url_for('view_restaurant', id=restaurant['id']) }}" class="btn dialog-btn1" type="button" id="yes-button">Yes</button>
+              <button class="btn dialog-btn2 " type="button" id="no-button">No</button>
+            </div>
+        </div>
+
+      <button class="btn custom-btn" type="submit" id="save_edit"  name="save">Submit</button>
+
+  </div>
+  </form>
+</div>
+{% endblock %}

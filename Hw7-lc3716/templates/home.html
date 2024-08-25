@@ -1,0 +1,29 @@
+
+ {% extends "main.html" %}
+
+{% block content %}
+    
+<div class="mt-2">
+    <div class="intro"> 
+        <div class="text-center">
+            <h2 class="main">Popular Restaurants</h2>
+        <p class="descript">Discover the best local restaurants near Columbia University.</p>
+        <div class="list-group" id="restaurant-list">
+            <!-- JavaScript will dynamically insert restaurant items here -->
+        </div>
+        </div>
+        
+
+            <div class="about">
+            <h3 class="about_us">About Us</h3>
+            <p class="bottom_descript">The website aims to simplify the search for local restaurants near Columbia University for students and staff. It offers a variety of dining options, including health-conscious and international cuisines, to meet diverse dietary needs.</p>
+            <p class="bottom_descript">Users can find restaurants using search features with:</p>
+            <ul class="custom-ul">
+                <li>Restaurant name</li>
+                <li>Any words related to the cuisine or style of the restaurant</li>
+                <li>Specific offerings like alcohol, beer, and vegetarian options</li>
+            </ul>
+        </div> 
+        
+    </div>
+{% endblock %}
